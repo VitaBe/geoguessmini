@@ -1,0 +1,7 @@
+{
+  "liveServer.settings.port": 8080,
+  "liveServer.settings.root": ".",
+  "liveServer.settings.CustomBrowser": "chrome",
+  "debug.javascript.autoAttachFilter": "smart",
+  "debug.javascript.debugByLinkOptions": "always"
+}
