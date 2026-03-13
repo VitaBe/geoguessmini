@@ -6,7 +6,7 @@ let gameItems = [];
 let currentIndex = 0;
 let imageUrlCache = new Map();
 let isFinal = false;
-let imageLoader = null;
+let zipImageLoader = null;
 let mapController = null;
 let uiControllerRef = null;
 
@@ -22,7 +22,7 @@ function initGame(items, imageLoaderObj, mapControllerObj, uiControllerObj) {
     currentIndex = 0;
     imageUrlCache.clear();
     isFinal = false;
-    imageLoader = imageLoaderObj;
+    zipImageLoader = imageLoaderObj;
     mapController = mapControllerObj;
     uiControllerRef = uiControllerObj;
 }
@@ -57,8 +57,8 @@ async function loadCurrentItem() {
     try {
         let imageUrl = imageUrlCache.get(item.filename);
 
-        if (!imageUrl && imageLoader && typeof imageLoader.getImageUrl === 'function') {
-            imageUrl = await imageLoader.getImageUrl(item.filename);
+        if (!imageUrl && zipImageLoader && typeof zipImageLoader.getImageUrl === 'function') {
+            imageUrl = await zipImageLoader.getImageUrl(item.filename);
             if (imageUrl) {
                 imageUrlCache.set(item.filename, imageUrl);
             }
