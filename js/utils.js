@@ -2,7 +2,7 @@
  * Utility functions for GeoQuest
  */
 
-const TOLERANCE_KM = 50;
+const TOLERANCE_KM = 200;
 
 /**
  * Parse a location string into lat/lng coordinates
