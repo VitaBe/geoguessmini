@@ -1,325 +1,356 @@
 /* Reset and base styles */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
 }
 
 html, body {
-    height: 100%;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
-    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
-    color: #fff;
+ height: 100%;
+ font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+ background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+ color: #fff;
 }
 
 /* View visibility system */
 .view {
-    display: none;
-    min-height: 100vh;
+ display: none;
+ min-height: 100vh;
 }
 
 .view.active {
-    display: flex;
-    flex-direction: column;
+ display: flex;
+ flex-direction: column;
 }
 
 /* Container */
 .container {
-    width: 100%;
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 2rem 1rem;
+ width: 100%;
+ max-width: 600px;
+ margin: 0 auto;
+ padding: 2rem 1rem;
 }
 
 /* Upload View */
 #upload-view {
-    align-items: center;
-    justify-content: center;
+ align-items: center;
+ justify-content: center;
 }
 
 #upload-view h1 {
-    text-align: center;
-    font-size: 2.5rem;
-    margin-bottom: 0.5rem;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+ text-align: center;
+ font-size: 2.5rem;
+ margin-bottom: 0.5rem;
+ background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+ -webkit-background-clip: text;
+ -webkit-text-fill-color: transparent;
+ background-clip: text;
 }
 
 .subtitle {
-    text-align: center;
-    color: #8892b0;
-    margin-bottom: 2rem;
-    font-size: 1.1rem;
+ text-align: center;
+ color: #8892b0;
+ margin-bottom: 2rem;
+ font-size: 1.1rem;
 }
 
 .upload-box {
-    margin-bottom: 2rem;
+ margin-bottom: 2rem;
 }
 
 .upload-label {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 2rem;
-    border: 2px dashed #667eea;
-    border-radius: 12px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    background: rgba(102, 126, 234, 0.05);
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ justify-content: center;
+ padding: 2rem;
+ border: 2px dashed #667eea;
+ border-radius: 12px;
+ cursor: pointer;
+ transition: all 0.3s ease;
+ background: rgba(102, 126, 234, 0.05);
 }
 
 .upload-label:hover {
-    background: rgba(102, 126, 234, 0.1);
-    border-color: #764ba2;
+ background: rgba(102, 126, 234, 0.1);
+ border-color: #764ba2;
 }
 
 .upload-icon {
-    font-size: 3rem;
-    margin-bottom: 0.5rem;
+ font-size: 3rem;
+ margin-bottom: 0.5rem;
 }
 
 .upload-text {
-    font-size: 1.2rem;
-    font-weight: 500;
-    margin-bottom: 0.25rem;
+ font-size: 1.2rem;
+ font-weight: 500;
+ margin-bottom: 0.25rem;
 }
 
 .upload-hint {
-    font-size: 0.85rem;
-    color: #8892b0;
+ font-size: 0.85rem;
+ color: #8892b0;
 }
 
 .error-message {
-    background: rgba(231, 76, 60, 0.2);
-    border: 1px solid #e74c3c;
-    border-radius: 8px;
-    padding: 1rem;
-    margin-bottom: 1rem;
-    color: #ff6b6b;
-    text-align: center;
+ background: rgba(231, 76, 60, 0.2);
+ border: 1px solid #e74c3c;
+ border-radius: 8px;
+ padding: 1rem;
+ margin-bottom: 1rem;
+ color: #ff6b6b;
+ text-align: center;
 }
 
 .error-message.hidden {
-    display: none;
+ display: none;
 }
 
 .instructions {
-    background: rgba(255, 255, 255, 0.05);
-    border-radius: 12px;
-    padding: 1.5rem;
+ background: rgba(255, 255, 255, 0.05);
+ border-radius: 12px;
+ padding: 1.5rem;
 }
 
 .instructions h3 {
-    margin-bottom: 1rem;
-    color: #ccd6f6;
+ margin-bottom: 1rem;
+ color: #ccd6f6;
 }
 
 .instructions ol {
-    margin-left: 1.25rem;
-    color: #8892b0;
+ margin-left: 1.25rem;
+ color: #8892b0;
 }
 
 .instructions li {
-    margin-bottom: 0.5rem;
+ margin-bottom: 0.5rem;
 }
 
 .instructions code {
-    background: rgba(102, 126, 234, 0.2);
-    padding: 0.2rem 0.4rem;
-    border-radius: 4px;
-    font-family: 'Monaco', 'Consolas', monospace;
-    font-size: 0.9em;
+ background: rgba(102, 126, 234, 0.2);
+ padding: 0.2rem 0.4rem;
+ border-radius: 4px;
+ font-family: 'Monaco', 'Consolas', monospace;
+ font-size: 0.9em;
 }
 
 /* Game View */
 #game-view {
-    padding: 1rem;
+ padding: 1rem;
 }
 
 .game-container {
-    max-width: 900px;
-    margin: 0 auto;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    height: 100vh;
-    max-height: 900px;
+ max-width: 900px;
+ margin: 0 auto;
+ width: 100%;
+ display: flex;
+ flex-direction: column;
+ gap: 1rem;
+ height: 100vh;
+ max-height: 900px;
 }
 
 .photo-section {
-    background: rgba(255, 255, 255, 0.05);
-    border-radius: 12px;
-    padding: 1rem;
-    flex: 0 0 auto;
+ background: rgba(255, 255, 255, 0.05);
+ border-radius: 12px;
+ padding: 1rem;
+ flex: 0 0 auto;
 }
 
 #game-photo {
-    width: 100%;
-    max-height: 300px;
-    object-fit: contain;
-    border-radius: 8px;
-    display: block;
-    background: rgba(0, 0, 0, 0.3);
+ width: 100%;
+ max-height: 300px;
+ object-fit: contain;
+ border-radius: 8px;
+ display: block;
+ background: rgba(0, 0, 0, 0.3);
 }
 
 #game-description {
-    margin-top: 1rem;
-    text-align: center;
-    color: #ccd6f6;
-    font-size: 1.1rem;
-    line-height: 1.5;
+ margin-top: 1rem;
+ text-align: center;
+ color: #ccd6f6;
+ font-size: 1.1rem;
+ line-height: 1.5;
 }
 
 .map-section {
-    flex: 1 1 auto;
-    min-height: 300px;
-    border-radius: 12px;
-    overflow: hidden;
+ flex: 1 1 auto;
+ min-height: 300px;
+ border-radius: 12px;
+ overflow: hidden;
+ position: relative;
 }
 
 #map {
-    width: 100%;
-    height: 100%;
-    min-height: 300px;
-    border-radius: 12px;
+ width: 100%;
+ height: 100%;
+ min-height: 300px;
+ border-radius: 12px;
+ z-index: 1;
+}
+
+/* Ensure map container allows pointer events */
+.leaflet-container {
+ background: #1a1a2e;
+}
+
+.leaflet-container * {
+ pointer-events: auto;
+}
+
+/* Visual feedback for click location - ripple effect */
+.click-feedback {
+ width: 40px;
+ height: 40px;
+ border-radius: 50%;
+ border: 3px solid #667eea;
+ background: rgba(102, 126, 234, 0.3);
+ position: absolute;
+ pointer-events: none;
+ transform: translate(-50%, -50%);
+ animation: ripple 0.6s ease-out forwards;
+ z-index: 1000;
+}
+
+@keyframes ripple {
+ 0% {
+  transform: translate(-50%, -50%) scale(0.5);
+  opacity: 1;
+ }
+  100% {
+  transform: translate(-50%, -50%) scale(2);
+  opacity: 0;
+ }
 }
 
 /* Progress bar */
 .progress-bar {
-    position: relative;
-    height: 30px;
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 15px;
-    overflow: hidden;
-    flex: 0 0 auto;
+ position: relative;
+ height: 30px;
+ background: rgba(255, 255, 255, 0.1);
+ border-radius: 15px;
+ overflow: hidden;
+ flex: 0 0 auto;
 }
 
 #progress-fill {
-    height: 100%;
-    background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
-    border-radius: 15px;
-    transition: width 0.3s ease;
-    width: 0%;
+ height: 100%;
+ background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+ border-radius: 15px;
+ transition: width 0.3s ease;
+ width: 0%;
 }
 
 #progress-text {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 0.9rem;
-    font-weight: 600;
-    color: #fff;
-    text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+ position: absolute;
+ top: 50%;
+ left: 50%;
+ transform: translate(-50%, -50%);
+ font-size: 0.9rem;
+ font-weight: 600;
+ color: #fff;
+ text-shadow: 0 1px 2px rgba(0,0,0,0.3);
 }
 
 /* Final View */
 #final-view {
-    align-items: center;
-    justify-content: center;
+ align-items: center;
+ justify-content: center;
 }
 
 .final-container {
-    text-align: center;
+ text-align: center;
 }
 
 #final-message {
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 16px;
-    padding: 3rem 2rem;
-    margin-bottom: 2rem;
-    font-size: 1.5rem;
-    line-height: 1.6;
-    color: #ccd6f6;
-    white-space: pre-wrap;
+ background: rgba(255, 255, 255, 0.1);
+ border-radius: 16px;
+ padding: 3rem 2rem;
+ margin-bottom: 2rem;
+ font-size: 1.5rem;
+ line-height: 1.6;
+ color: #ccd6f6;
+ white-space: pre-wrap;
 }
 
 #final-message h2 {
-    margin-bottom: 1rem;
-    color: #fff;
+ margin-bottom: 1rem;
+ color: #fff;
 }
 
 .btn-primary {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    color: #fff;
-    border: none;
-    padding: 1rem 2rem;
-    font-size: 1.1rem;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: transform 0.2s, box-shadow 0.2s;
+ background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+ color: #fff;
+ border: none;
+ padding: 1rem 2rem;
+ font-size: 1.1rem;
+ border-radius: 8px;
+ cursor: pointer;
+ transition: transform 0.2s, box-shadow 0.2s;
 }
 
 .btn-primary:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
-}
-
-/* Leaflet custom styles */
-.leaflet-container {
-    background: #1a1a2e;
+ transform: translateY(-2px);
+ box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
 }
 
 /* Responsive adjustments */
 @media (min-width: 768px) {
-    #upload-view h1 {
-        font-size: 3.5rem;
-    }
+ #upload-view h1 {
+  font-size: 3.5rem;
+ }
 
-    .upload-label {
-        padding: 3rem;
-    }
+ .upload-label {
+  padding: 3rem;
+ }
 
-    .game-container {
-        padding: 2rem;
-    }
+ .game-container {
+  padding: 2rem;
+ }
 
-    #game-photo {
-        max-height: 350px;
-    }
+ #game-photo {
+  max-height: 350px;
+ }
 
-    .map-section {
-        min-height: 400px;
-    }
+ .map-section {
+  min-height: 400px;
+ }
 
-    #map {
-        min-height: 400px;
-    }
+ #map {
+  min-height: 400px;
+ }
 
-    #final-message {
-        font-size: 1.75rem;
-        padding: 4rem 3rem;
-    }
+ #final-message {
+  font-size: 1.75rem;
+  padding: 4rem 3rem;
+ }
 }
 
 @media (max-width: 480px) {
-    #upload-view h1 {
-        font-size: 2rem;
-    }
+ #upload-view h1 {
+  font-size: 2rem;
+ }
 
-    .game-container {
-        height: auto;
-        max-height: none;
-    }
+ .game-container {
+  height: auto;
+  max-height: none;
+ }
 
-    .map-section {
-        min-height: 250px;
-    }
+ .map-section {
+  min-height: 250px;
+ }
 
-    #map {
-        min-height: 250px;
-    }
+ #map {
+  min-height: 250px;
+ }
 
-    #game-photo {
-        max-height: 200px;
-    }
+ #game-photo {
+  max-height: 200px;
+ }
 
-    #final-message {
-        font-size: 1.2rem;
-        padding: 2rem 1rem;
-    }
+ #final-message {
+  font-size: 1.2rem;
+  padding: 2rem 1rem;
+ }
 }
